@@ -1,0 +1,12 @@
+<div>
+    <% if(currentUser){ %>
+        <h1>User Info</h1>
+        <ul class="left-align">
+            <% for(let key in currentUser){ %>
+                <li><strong><%= key %></strong>: <%= currentUser[key] %></li>
+            <% } %>
+        </ul>
+    <% }else{  %>
+        <h2>Please <a href="/login">Login</a> or <a href="/signup">sign up.</a></h2>
+    <% } %>
+</div>
